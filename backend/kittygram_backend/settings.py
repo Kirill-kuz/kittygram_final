@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY_DJANGO', '1')
 
-DEBUG = os.getenv('SECRET_DEBUG')
+DEBUG = os.getenv('SECRET_DEBUG', False) == 'TRUE'
 
 default_allowed_hosts = '127.0.0.1,localhost'
 ALLOWED_HOSTS = os.getenv('SECRET_ALLOWED_HOSTS', default_allowed_hosts)
